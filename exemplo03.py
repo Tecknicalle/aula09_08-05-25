@@ -19,6 +19,7 @@ def calcula_total_media():
 
     med = tot / len(lst_cadastro)
     return tot, med
+
 def busca_maior()
     maior = 0
     vendedor = ''
@@ -29,6 +30,25 @@ def busca_maior()
             vendedor = v['Nome']
 
     return maior, vendedor 
+
+def busca_vendedor(nome):
+    resposta = ''
+    vl = 0
+
+    for cadastro in lst_cadastro:
+        if cadastro('nome') == nome:
+            resposta = cadastro('nome')
+            vl = cadastro['valor']
+
+            return resposta, vl
+    return resposta, vl   # Se entrar no if, executa as in
+return resposta, vl # Só executa, se não entrar no if     
+
+
+            
+
+
+
     
 
 
@@ -54,6 +74,16 @@ maior_venda, maior_vendedor = busca_maior()
 print(30'=')
 print(f'Maior venda: {maior_venda})
 print(f'Nome do vendedor: {maior_vendedor}')
+
+# EXEMPLO 04 - BUSCAR VENDEDOR 
+vendedor = input('Informe o nome do vendedor: ')
+nome_vendedor = busca_vendedor(vendedor)
+
+if nome_vendedor:
+    print(f'O vendedor {nome_vendedor} está presente')
+    print(f'O valor da venda é {Valor}')
+else:
+ print('f{nome_vendedor} não encontrado')          
 
 
 
