@@ -1,0 +1,1 @@
+tot += pessoa['valor']
